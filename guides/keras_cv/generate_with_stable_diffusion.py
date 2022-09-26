@@ -117,9 +117,14 @@ When these are combined, the KerasCV StableDiffusion model runs orders of magnit
 faster than naive implementations.  This section shows how to enable all of these
 features, and the resulting performance gain yielded from using them.
 
-For the purposes of comparison, I ran some benchmarks with the
-[HuggingFace diffusers](https://github.com/huggingface/diffusers) implementation of
-StableDiffusion on an A100 GPU it took around 12.8 seconds to generate three images.
+For the purposes of comparison, [I ran some benchmarks with the
+HuggingFace diffusers implementation of
+StableDiffusion as well as KerasCV's StableDiffusion](https://github.com/LukeWood/stable-diffusion-performance-benchmarks).
+I ran both implementations on an A100 GPU.
+The PyTorch implementation took around 12.8 seconds to generate three images, while
+KerasCV's StableDiffusion implementation took
+6.5 seconds.  That's almost a halving of execution time!
+
 The runtime results from running this guide may vary, in my testing the KerasCV
 implementation of StableDiffusion is significantly faster than the PyTorch counterpart.
 This may be largely attributed to XLA compilation.
